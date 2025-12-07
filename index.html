@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Punic Wars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <div class="overlay">
+    <h1>⚔️ The Punic Wars ⚔️</h1>
+    <p>Explore the epic conflicts between Rome and Carthage (264–146 BCE)</p>
+    <input type="text" id="search" placeholder="Search for a war..." onkeyup="searchWar()">
+    <ul id="results">
+      <li><a href="first.html">First Punic War (264–241 BCE)</a></li>
+      <li><a href="second.html">Second Punic War (218–201 BCE)</a></li>
+      <li><a href="third.html">Third Punic War (149–146 BCE)</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function searchWar() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const items = document.querySelectorAll('#results li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

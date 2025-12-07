@@ -1,0 +1,152 @@
+/* --- General Page Setup --- */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #f4f4f4;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+/* --- Homepage Background --- */
+.home {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInBackground 2s ease-in-out;
+}
+
+/* --- Background fade animation --- */
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Overlay container --- */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Title & Text --- */
+h1 {
+  font-size: 3.2rem;
+  color: #f8d64e;
+  text-shadow: 0 0 20px rgba(248, 214, 78, 0.6);
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 35px rgba(248, 214, 78, 1);
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* --- Search Bar --- */
+input {
+  padding: 12px 20px;
+  width: 60%;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(248, 214, 78, 0.7);
+  transform: scale(1.02);
+}
+
+/* --- Links & Results --- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+li {
+  margin: 15px 0;
+}
+
+a {
+  color: #f8d64e;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #f8d64e;
+  transform: scale(1.05);
+}
+
+/* --- Page Layouts --- */
+.page {
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  animation: fadeIn 1.5s ease;
+}
+
+.page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f8d64e;
+  text-shadow: 0 0 20px rgba(248, 214, 78, 0.5);
+}
+
+img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+}
+
+a[href="index.html"] {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
